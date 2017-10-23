@@ -1,0 +1,41 @@
+High level specs:
+-----------------------------------------
+Load budget spreadsheets into sqlite db via python, google apis
+  build/design database schema
+  Parse out data for each month
+    needs to support current spreadsheet formatting and/or might need to recommend changes to spreadsheets
+  Enter data into db
+
+create flask-based website to display data
+  should have page that provides controls to choose month, timeframe, etc
+  displays returned report
+
+generate financial report
+  did we meet our allocated budget for [category] this month?
+  How much over/under?
+  Over the past [n] months, how did we perform on [category]?
+  How does our performance in [month] impact our total cash reserves?
+  What are our total assets at end of [month]?
+  What are our total liabilities at end of [month]?
+  What are our projected total assets at time [x], assuming [y]?
+  What are our projected total liabilities at time [x], assuming [y]?
+
+  Report should use graphs when appropriate
+  report must be well-formatted
+
+provide ability to print/save report
+
+code should be in gitlab/bitbucket
+  https://github.com/jchezum/homeBudgetReports
+
+report server should run as a service on windows
+  be easy to deploy, maintain
+    see remainder of flask setup project on udemy on how to do this
+
+report must be user-friendly (kat has to be able to use it)
+
+there should be a suite of test cases/unit tests to validate data
+
+continuous integration deployment?
+
+
